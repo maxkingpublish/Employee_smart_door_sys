@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ep_listModelStoreContainer" CdmEntityContainer="ep_listEntities1">
+    <EntitySetMapping Name="ep_Table">
+      <EntityTypeMapping TypeName="ep_listModel.ep_Table">
+        <MappingFragment StoreEntitySet="ep_Table">
+          <ScalarProperty Name="ep_Id" ColumnName="ep_Id" />
+          <ScalarProperty Name="ep_Name" ColumnName="ep_Name" />
+          <ScalarProperty Name="ep_Img" ColumnName="ep_Img" />
+          <ScalarProperty Name="ep_Inday" ColumnName="ep_Inday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
