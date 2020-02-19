@@ -1,45 +1,56 @@
 ﻿@model IEnumerable<Employee_smart_door_sys.Models.ep_Table>
 
 @{
-    ViewBag.Title = "employee_list";
+    ViewBag.Title = "ALOHA公司-員工資料表";
 }
 
-<h2>employee_list</h2>
+    <h2>ALOHA公司-員工資料表</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("新增員工資料", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ep_Name)
+            員工編號
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ep_Img)
+            員工姓名
+            <!--   @Html.DisplayNameFor(model => model.ep_Name)-->
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ep_Inday)
+            員工照片
+            <!--@Html.DisplayNameFor(model => model.ep_Img)-->
         </th>
-        <th></th>
-    </tr>
+        <th>
+            到職日
+            <!--@Html.DisplayNameFor(model => model.ep_Inday) -->
+        </th>
+            <th></th>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ep_Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ep_Img)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ep_Inday)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ep_Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ep_Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ep_Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.ep_Id
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ep_Name)
+            </td>
+            <td>
+                <img src="~/people_i_know/@item.ep_Img" width="100"/>
+                <!--@Html.DisplayFor(modelItem => item.ep_Img)-->
+            </td>
+            <td>
+                @DateTime.Parse(item.ep_Inday.ToString()).ToShortDateString()
+                <!--@Html.DisplayFor(modelItem => item.ep_Inday)-->
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ep_Id }) |
+                <!--@Html.ActionLink("Details", "Details", new { id=item.ep_Id }) |-->
+                @Html.ActionLink("Delete", "Delete", new { id = item.ep_Id })
+            </td>
+        </tr>
+    }
 
-</table>
+    </table>
