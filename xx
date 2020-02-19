@@ -1,0 +1,16 @@
+update front end page..
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   .vs/Employee_smart_door_sys/v16/.suo
+#	modified:   .vs/Employee_smart_door_sys/v16/Server/sqlite3/storage.ide
+#	modified:   Employee_smart_door_sys/App_Data/ep_list.mdf
+#	modified:   Employee_smart_door_sys/App_Data/ep_list_log.ldf
+#	modified:   Employee_smart_door_sys/Views/Home/employee_list.cshtml
+#	modified:   Employee_smart_door_sys/obj/Debug/Employee_smart_door_sys.csprojAssemblyReference.cache
+#
