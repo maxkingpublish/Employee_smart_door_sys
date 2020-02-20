@@ -1,7 +1,6 @@
 # Employee_smart_door_sys
 
-This project name **Employee_smart_door_sys**,target to built an employee manage system include AI demo **smart system**,which could recognize human face and judge if 
-who belong to your company.
+This project name **Employee_smart_door_sys**,target to built an employee manage system include AI demo **smart system**,which could recognize human face and judge if who belong to your company,and auto open door for them.
 
 ## Main Model
 
@@ -9,9 +8,12 @@ The main model is from facenet,which could consult **face_recognition**:
 https://github.com/ageitgey/face_recognition
 
 ## Web structure
-Web service is built by flask,Front end built by C# MVC,
-which use plug-in to control camera.(not done yet,update recently)
-The API endpoint structure for now as below
+Web service is built by flask,Front end built by C# MVC,which inside Employee_smart_door_sys folder.
+The Employee_smart_door_sys web,have a function to call a plug-in tool(an exe file,made by AutoIT)
+then the tool would wake up an Flask(python base)web,and take a picture,and real time recognize the people in frond of the camera,
+then judgement if it should to open the door.(not done yet.)
+
+The Flask API endpoint structure for now as below
 - To take picture: 
    localhost:5000/hello/"your name"
 - To open a real time face recognize service:
